@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровый Образ Жизни</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit; /* Наследовать цвет от родительского элемента */
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(to right, #4CAF50, #8BC34A); /* Зеленый градиент */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Навигация */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100; /* Чтобы навигация всегда была сверху */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: #555;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block; /* Чтобы padding работал корректно */
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Основное содержание */
+        main {
+            padding: 30px;
+            max-width: 960px;
+            margin: 0 auto; /* Центрирование контента */
+        }
+
+        main h2 {
+            text-align: center;
+            font-size: 2.8em;
+            color: #4CAF50;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        main p {
+            text-align: justify;
+            line-height: 1.7;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        /* Галерея изображений */
+        .gallery {
+            display: flex;            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap; /* Перенос изображений на новую строку, если не помещаются */
+        }
+
+        .gallery img {
+            max-width: 300px;  /* Увеличен размер */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s; /* Анимация при наведении */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Небольшое увеличение при наведении */
+        }
+
+        /* Подпись ЗОЖ */
+        .zoj-signature {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-top: 30px;
+            color: #4CAF50;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Футер (если нужен) */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Адаптивность */
+        @media only screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .gallery {
+                flex-direction: column;
+            }
+        }
+
+        /* Анимация заголовка */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Анимация для основного контента */
+        main {
+            animation: fadeIn 1.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <h1>КРИТ-2025<br>Валиева Аделина приветствует жюри конкурса!</h1>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>  <!--  Замените на "index.html" или "/" если это главная страница -->
+            <li><a href="recipes.html">Рецепты</a></li> <!--  Путь к странице с рецептами -->
+            <li><a href="registration.html">Регистрация</a></li> <!-- Путь к странице регистрации -->
+        </ul>
+    </nav>
+
+    <!-- Основное содержание страницы -->
+    <main>
+        <!-- Заголовок -->
+        <h2>Я за здоровый образ жизни</h2>
+
+        <!-- Приветствие -->
+        <p>
+            Приветствуем вас на нашем сайте, посвященном здоровому образу жизни! Здесь вы найдете вдохновение, полезные советы и практические рекомендации, которые помогут вам стать здоровее, энергичнее и счастливее. Мы верим, что забота о себе – это инвестиция в будущее, и готовы помочь вам на этом пути.
+        </p>
+
+        <!-- Галерея изображений -->
+        <div class="gallery">
+            <img src="https://cdn.culture.ru/images/6ab71c98-6f23-5447-b2e4-696bed03c852" alt="ЗОЖ">
+            <img src="https://cdn.culture.ru/images/f65b17b0-05f1-58ed-acaa-c37db2ba37e3" alt="ЗОЖ">
+            <img src="https://i.pinimg.com/originals/b7/56/23/b756234d24b2086126bec7de66c5151d.jpg" alt="ЗОЖ">
+        </div>
+    </body>
+    </html>
+    
+    <div style="margin-left: 5px;">
+
+    </div>
+    
+    <p style="padding-left: 3px;">
+    </p>
+    
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правильное Питание</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* Кремовый фон */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #4CAF50; /* Зеленый цвет для заголовка */
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #4CAF50;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .important {
+            font-weight: bold;
+            color: #e44d26; /* Красный цвет для выделения */
+        }
+
+        /* Адаптивность */
+        @media only screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Правильное Питание: Основы Здоровья и Благополучия</h1>
+
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80" alt="Разнообразие здоровой еды">
+
+        <h2>Что такое правильное питание?</h2>        <p>Правильное питание – это сбалансированный рацион, который обеспечивает организм всеми необходимыми питательными веществами, витаминами и минералами для поддержания здоровья, энергии и нормального функционирования всех органов и систем. Оно включает в себя потребление разнообразной пищи в умеренных количествах.</p>
+
+        <h2>Основные принципы правильного питания:</h2>
+        <ul>
+            <li><span class="important">Разнообразие:</span> Включайте в свой рацион продукты из всех основных групп: овощи, фрукты, злаки, белки и молочные продукты.</li>
+            <li><span class="important">Баланс:</span> Убедитесь, что ваш рацион сбалансирован по содержанию белков, жиров и углеводов.</li>
+            <li><span class="important">Умеренность:</span> Контролируйте размер порций и избегайте переедания.</li>
+            <li><span class="important">Регулярность:</span> Принимайте пищу регулярно, примерно в одно и то же время каждый день.</li>
+            <li><span class="important">Достаточное количество воды:</span> Пейте достаточно воды в течение дня (не менее 1,5-2 литров).</li>
+        </ul>
+
+        <h2>Рекомендации по питанию:</h2>
+        <ul>
+            <li><span class="important">Овощи и фрукты:</span> Стремитесь потреблять не менее 5 порций овощей и фруктов в день.</li>
+            <li><span class="important">Злаки:</span> Выбирайте цельнозерновые продукты, такие как цельнозерновой хлеб, овсянка, гречка и коричневый рис.</li>
+            <li><span class="important">Белки:</span> Включайте в свой рацион нежирные источники белка, такие как курица, рыба, бобовые, тофу и яйца.</li>
+            <li><span class="important">Молочные продукты:</span> Отдавайте предпочтение нежирным молочным продуктам.</li>
+            <li><span class="important">Ограничьте потребление:</span> Сахара, соли, насыщенных и трансжиров, а также обработанных продуктов.</li>
+        </ul>
+
+        <h2>Преимущества правильного питания:</h2>
+        <ul>
+            <li>Поддержание здорового веса</li>
+            <li>Укрепление иммунитета</li>
+            <li>Повышение уровня энергии</li>
+            <li>Улучшение настроения</li>
+            <li>Снижение риска развития хронических заболеваний (сердечно-сосудистые заболевания, диабет, некоторые виды рака)</li>
+        </ul>
+
+        <p>Правильное питание – это не диета, а образ жизни. Сделайте осознанный выбор в пользу здоровой пищи, и ваше тело отблагодарит вас отличным здоровьем и прекрасным самочувствием!</p>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор калорий</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <h1>Калькулятор калорий</h1>
+    <label>Введите количество углеводов (г):</label>
+    <input type="number" id="carbs" placeholder="Углеводы" />
+
+    <label>Введите количество белков (г):</label>
+    <input type="number" id="proteins" placeholder="Белки" />
+
+    <label>Введите количество жиров (г):</label>
+    <input type="number" id="fats" placeholder="Жиры" />
+
+    <button onclick="calculateCalories()">Подсчитать калории</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculateCalories() {
+        const carbs = parseFloat(document.getElementById('carbs').value) || 0;
+        const proteins = parseFloat(document.getElementById('proteins').value) || 0;
+        const fats = parseFloat(document.getElementById('fats').value) || 0;
+
+        const caloriesFromCarbs = carbs * 4;
+        const caloriesFromProteins = proteins * 4;
+        const caloriesFromFats = fats * 9;
+
+        const totalCalories = caloriesFromCarbs + caloriesFromProteins + caloriesFromFats;
+
+        document.getElementById('result').innerText = `Общее количество калорий: ${totalCalories} ккал`;
+    }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привычки, которые меняют жизнь</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light Blue */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            color: #007bff; /* Blue */
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Адаптивность */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Сила Привычек: Маленькие Шаги к Большим Изменениям</h1>
+
+        <p>Привычки – это автоматические модели поведения, которые мы повторяем регулярно. Они формируются со временем и могут оказывать огромное влияние на нашу жизнь.</p>
+
+        <h2>Полезные Привычки:</h2>
+        <ul>
+            <li>Ранний подъем: Начинайте день с энергией и временем для себя.</li>
+            <li>Регулярные занятия спортом: Поддерживайте физическое и ментальное здоровье.</li>
+            <li>Чтение: Развивайте ум и расширяйте кругозор.</li>
+            <li>Медитация: Снимайте стресс и улучшайте концентрацию.</li>
+            <li>Правильное питание: Обеспечивайте организм необходимыми питательными веществами.</li>
+        </ul>
+
+        <h2>Как сформировать привычку:</h2>
+        <p>Формирование привычки требует времени и усилий. Важно начинать с малого, быть последовательным и не сдаваться при первых трудностях.</p>
+
+        <ol>
+            <li>Начните с малого: <span class="highlight">Легче начать с 5 минут, чем с часа.</span></li>
+            <li>Будьте последовательны: <span class="highlight">Повторяйте действие каждый день.</span></li>
+            <li>Создайте триггер: <span class="highlight">Привяжите новую привычку к существующей.</span></li>
+            <li>Награждайте себя: <span class="highlight">За каждое достижение давайте себе небольшое поощрение.</span></li>
+        </ol>
+
+        <p>Привычки – это мощный инструмент для улучшения жизни. Начните формировать полезные привычки прямо сейчас и наблюдайте за позитивными изменениями!</p>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекинг привычек</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        #habitForm {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            background: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            background: #d9534f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Трекинг привычек</h1>
+<div id="habitForm">
+    <input type="text" id="habitInput" placeholder="Введите привычку..." />
+    <input type="submit" id="addHabit" value="Добавить" />
+</div>
+<ul id="habitList"></ul>
+
+<script>
+    document.getElementById('addHabit').addEventListener('click', function() {
+        const habitInput = document.getElementById('habitInput');
+        const habitText = habitInput.value.trim();
+
+        if (habitText) {
+            const habitList = document.getElementById('habitList');
+            const li = document.createElement('li');
+
+            li.textContent = habitText;
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Удалить';
+            deleteButton.addEventListener('click', function() {
+                habitList.removeChild(li);
+            });
+
+            li.appendChild(deleteButton);
+            habitList.appendChild(li);
+            habitInput.value = '';
+        } else {
+            alert('Пожалуйста, введите привычку.');
+        }
+    });
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь событий 2025 года</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .event {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .date {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Календарь событий по здоровому образу жизни - 2025 год</h1>
+
+    <div class="event">
+        <div class="date">15 января 2025</div>
+        <div><strong>Курс по здоровому питанию</strong></div>
+        <p>Начало курса, посвященного основам здорового питания и приготовлению блюд.</p>
+    </div>
+
+    <div class="event">
+        <div class="date">10 марта 2025</div>
+        <div><strong>День здоровья</strong></div>
+        <p>Мероприятие, включающее физические активности, лекции и консультации от специалистов.</p>
+    </div>
+
+    <div class="event">
+        <div class="date">1 июня 2025</div>
+        <div><strong>Фестиваль активного образа жизни</strong></div>
+        <p>Фестиваль, включающий спортивные соревнования, мастер-классы по фитнесу.</p>
+    </div>
+
+    <div class="event">
+        <div class="date">21 сентября 2025</div>
+        <div><strong>Международный день сохранения здоровья</strong></div>
+        <p>Кампания по повышению осведомленности о важности здорового образа жизни.</p>
+    </div>
+
+    <div class="event">
+        <div class="date">5 ноября 2025</div>
+        <div><strong>Неделя психического здоровья</strong></div>
+        <p>Серия мероприятий, направленных на улучшение психического благополучия.</p>
+    </div>
+
+    <div class="event">
+        <div class="date">10 декабря 2025</div>
+        <div><strong>Забег по поддержке здорового образа жизни</strong></div>
+        <p>Благотворительный забег для поддержки проектов по популяризации здоровья.</p>
+    </div>
+</body>
+</html>

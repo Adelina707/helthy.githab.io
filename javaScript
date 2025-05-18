@@ -1,0 +1,18 @@
+    const express = require('express');
+    const bodyParser = require('body-parser');
+    const app = express();
+    const port = 3000;
+
+    app.use(bodyParser.urlencoded({ extended: false })); // для обработки данных из формы
+
+    app.post('/register', (req, res) => {
+        console.log('Получены данные из формы:', req.body);
+        // Здесь нужно добавить код для проверки данных,
+        // создания нового пользователя и сохранения в базе данных.
+
+        res.send('Регистрация прошла успешно!'); // Отправить ответ клиенту
+    });
+
+    app.listen(port, () => {
+        console.log(`Сервер запущен на порту ${port}`);
+    });
